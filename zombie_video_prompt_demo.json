@@ -1,0 +1,104 @@
+{
+  "video_id": "video_zmb_8675",
+  "video_title": "Dead Sprint: Urban Escape",
+  "video_description": "A lone survivor's desperate flight from a relentless zombie through the decaying heart of the city. This intense chase sequence follows the survivor from a terrifying initial encounter, through a claustrophobic alleyway, to a dramatic rooftop confrontation.",
+  "video_duration": "18s",
+  "video_aspect_ratio": "16:9",
+  "shots": [
+    {
+      "shot_id": "shot_001",
+      "shot_duration": "5s",
+      "shot_location": "ransacked downtown bookstore",
+      "shot_description": "A survivor, Alex, scavenges for supplies when a seemingly lifeless zombie suddenly awakens and gives chase.",
+      "shot_details": "Sunlight streams through grimy windows, illuminating dust particles in the air. Books are strewn across the floor, and shelves are overturned. A 'Bestsellers' sign hangs crookedly.",
+      "shot_sounds": ["eerie silence", "creaking floorboards", "a sudden, guttural groan", "the sharp gasp of the survivor", "shuffling feet turning into running footsteps"],
+      "shot_dialogue": [],
+      "shot_camera_movements": [
+        {"type": "dolly_in", "duration": "2s", "target": "Alex's hand reaching for a can of food"},
+        {"type": "rack_focus", "duration": "1s", "target": "Zombie in the background"},
+        {"type": "shaky_whip_pan", "duration": "1s", "target": "Alex as he turns to run"}
+      ],
+      "shot_characters": [
+        {
+          "character_id": "char_alex",
+          "description": "Male, late-20s, wearing a worn jacket and cargo pants, carrying a backpack.",
+          "action": "crouched down, cautiously scanning the area, then his body tenses and he bolts.",
+          "expression": "focused and wary, shifting to sheer terror"
+        },
+        {
+          "character_id": "char_zombie_01",
+          "description": "Male, elderly, wearing a torn librarian's vest.",
+          "action": "slumped in a chair, head down, then head snaps up, eyes white, and lurches to its feet to begin a stumbling pursuit.",
+          "expression": "vacant, then mindlessly aggressive"
+        }
+      ],
+      "shot_lighting": "Muted, dusty daylight filtering through dirty windows.",
+      "shot_time_of_day": "Mid-afternoon",
+      "shot_weather": "Clear, visible through windows",
+      "transition_to_next_shot": "hard_cut"
+    },
+    {
+      "shot_id": "shot_002",
+      "shot_duration": "7s",
+      "shot_location": "narrow, cluttered service alley",
+      "shot_description": "The chase intensifies as Alex frantically navigates a tight alleyway, with the zombie closing in.",
+      "shot_details": "Graffiti-covered brick walls, overflowing dumpsters, and piles of wet cardboard boxes. A fire escape ladder is visible at the far end.",
+      "shot_sounds": ["pounding footsteps on concrete", "clatter of knocked-over bottles", "raspy, persistent snarling", "Alex's panicked grunts and heavy breathing"],
+      "shot_dialogue": [],
+      "shot_camera_movements": [
+        {"type": "handheld_tracking", "duration": "5s", "target": "Alex, from a low angle behind him"},
+        {"type": "quick_glance_back", "duration": "1s", "target": "Zombie's face, uncomfortably close"}
+      ],
+      "shot_characters": [
+        {
+          "character_id": "char_alex",
+          "description": "Male, late-20s, now looking more disheveled.",
+          "action": "sprinting, stumbling, shoving a dumpster aside to create an obstacle, begins to climb a fire escape.",
+          "expression": "desperate and exhausted"
+        },
+        {
+          "character_id": "char_zombie_01",
+          "description": "Male, elderly, relentless in pursuit.",
+          "action": "running with a clumsy but fast gait, crashing through obstacles, starts to climb the fire escape.",
+          "expression": "single-minded, aggressive hunger"
+        }
+      ],
+      "shot_lighting": "Dark shadows with harsh strips of sunlight from above.",
+      "shot_time_of_day": "Mid-afternoon",
+      "shot_weather": "Clear",
+      "transition_to_next_shot": "whip_pan_up"
+    },
+    {
+      "shot_id": "shot_003",
+      "shot_duration": "6s",
+      "shot_location": "building rooftop",
+      "shot_description": "Trapped on the rooftop, Alex makes a final, desperate stand against the pursuing zombie.",
+      "shot_details": "A flat, gravel-covered roof with ventilation ducts and a low ledge overlooking the street below. The city skyline is visible in the distance.",
+      "shot_sounds": ["howling wind", "sounds of a desperate struggle", "a final, choked shriek", "the heavy thud of an impact on the ground below (faint)"],
+      "shot_dialogue": [],
+      "shot_camera_movements": [
+        {"type": "arc_shot", "duration": "3s", "target": "Alex and the Zombie circling each other"},
+        {"type": "crash_zoom", "duration": "1s", "target": "Alex's face as he shoves the zombie"},
+        {"type": "static_wide", "duration": "2s", "target": "Alex standing alone, catching his breath"}
+      ],
+      "shot_characters": [
+        {
+          "character_id": "char_alex",
+          "description": "Male, late-20s, at his limit.",
+          "action": "scrambles to his feet, dodges a lunge from the zombie, and uses its momentum to push it over the ledge. He then collapses against a vent, exhausted.",
+          "expression": "terror turning into grim determination, then exhausted relief"
+        },
+        {
+          "character_id": "char_zombie_01",
+          "description": "Male, elderly, cornering its prey.",
+          "action": "lunges for Alex, overextends, and is pushed over the edge, flailing as it falls.",
+          "expression": "mindless fury"
+        }
+      ],
+      "shot_lighting": "Harsh, direct afternoon sun.",
+      "shot_time_of_day": "Mid-afternoon",
+      "shot_weather": "Windy",
+      "transition_to_next_shot": "fade_to_black"
+    }
+  ]
+}
