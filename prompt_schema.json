@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Video Generation Prompt Schema (Advanced)",
+  "description": "Schema for defining a video generation prompt with advanced shot control, characters, and props.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "video_id",
+      "video_title",
+      "output_format",
+      "resolution",
+      "frame_rate",
+      "shots"
+    ],
+    "properties": {
+      "video_id": {
+        "type": "string",
+        "description": "Unique identifier for the video (e.g., UUID)."
+      },
+      "video_title": {
+        "type": "string",
+        "description": "A human-readable title for the entire video."
+      },
+      "video_description": {
+        "type": "string",
+        "description": "An overview of the video's content.",
+        "default": ""
+      },
+      "output_format": {
+        "type": "string",
+        "description": "Desired output format for the video (e.g., mp4, webm).",
+        "enum": ["mp4", "webm", "gif"]
+      },
+      "resolution": {
+        "type": "string",
+        "description": "Video resolution (e.g., 1920x1080, 1280x720).",
+        "pattern": "^\\d+x\\d+$"
+      },
+      "frame_rate": {
+        "type": "integer",
+        "description": "Frames per second for the video.",
+        "minimum": 1
+      },
+      "shots": {
+        "type": "array",
+        "description": "An array of shot objects, defining the sequence of events in the video.",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": [
+            "shot_id",
+            "shot_duration",
+            "shot_location",
+            "shot_description"
+          ],
+          "properties": {
+            "shot_id": {
+              "type": "string",
+              "description": "Unique identifier for this specific shot within the video."
+            },
+            "shot_duration": {
+              "type": "string",
+              "description": "Duration of the shot (e.g., '4s', '1m30s').",
+              "pattern": "^(\\d+m)?(\\d+s)?$"
+            },
+            "shot_location": {
+              "type": "string",
+              "description": "General setting or environment of the shot (e.g., 'indoor office', 'mountain trail')."
+            },
+            "shot_description": {
+              "type": "string",
+              "description": "A concise overview of the main action or focus of the shot."
+            },
+            "shot_details": {
+              "type": "string",
+              "description": "More specific details about the shot's environment, background elements, etc.",
+              "default": ""
+            },
+            "shot_sounds": {
+              "type": "array",
+              "description": "An array of audible elements present in the shot.",
+              "items": {
+                "type": "string"
+              },
+              "default": []
+            },
+            "shot_dialogue": {
+              "type": ["array", "null"],
+              "description": "An array of dialogue lines, each specifying character and line, or null if no dialogue.",
+              "items": {
+                "type": "object",
+                "required": ["character", "line"],
+                "properties": {
+                  "character": {
+                    "type": "string",
+                    "description": "The name or identifier of the speaking character."
+                  },
+                  "line": {
+                    "type": "string",
+                    "description": "The actual dialogue spoken."
+                  }
+                }
+              },
+              "default": null
+            },
+            "shot_camera_position": {
+              "type": "string",
+              "description": "General static camera position relative to the subject (e.g., 'front', 'behind', 'side', 'overhead').",
+              "default": "front"
+            },
+            "shot_camera_angle": {
+              "type": "string",
+              "description": "General static camera angle (e.g., 'eye-level', 'low-angle', 'high-angle', 'wide-shot', 'close-up').",
+              "default": "eye-level"
+            },
+            "shot_camera_movements": {
+              "type": "array",
+              "description": "An array of dynamic camera movements within the shot.",
+              "items": {
+                "type": "object",
+                "required": ["type", "duration"],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "description": "Type of camera movement (e.g., 'pan_left', 'pan_right', 'tilt_up', 'tilt_down', 'zoom_in', 'zoom_out', 'dolly_in', 'dolly_out', 'track_left', 'track_right').",
+                    "enum": ["pan_left", "pan_right", "tilt_up", "tilt_down", "zoom_in", "zoom_out", "dolly_in", "dolly_out", "track_left", "track_right"]
+                  },
+                  "duration": {
+                    "type": "string",
+                    "description": "Duration of the camera movement (e.g., '2s', '0.5s').",
+                    "pattern": "^(\\d+(\\.\\d+)?s)?$"
+                  },
+                  "target": {
+                    "type": "string",
+                    "description": "Optional: Specific object or character ID the camera should focus on during the movement.",
+                    "default": null
+                  }
+                }
+              },
+              "default": []
+            },
+            "shot_characters": {
+              "type": "array",
+              "description": "An array of character objects present in the shot.",
+              "items": {
+                "type": "object",
+                "required": ["character_id", "description", "action"],
+                "properties": {
+                  "character_id": {
+                    "type": "string",
+                    "description": "Unique identifier for this character within the shot/video."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Physical description and attire of the character."
+                  },
+                  "action": {
+                    "type": "string",
+                    "description": "The action(s) the character is performing."
+                  },
+                  "expression": {
+                    "type": "string",
+                    "description": "The character's facial expression (e.g., 'neutral', 'smiling', 'curious', 'angry').",
+                    "default": "neutral"
+                  }
+                }
+              },
+              "default": []
+            },
+            "shot_props": {
+              "type": "array",
+              "description": "An array of prop objects present in the shot.",
+              "items": {
+                "type": "object",
+                "required": ["prop_id", "description"],
+                "properties": {
+                  "prop_id": {
+                    "type": "string",
+                    "description": "Unique identifier for this prop within the shot/video."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Physical description of the prop."
+                  },
+                  "state": {
+                    "type": "string",
+                    "description": "The current state or condition of the prop (e.g., 'open, screen on', 'empty', 'broken').",
+                    "default": ""
+                  },
+                  "position": {
+                    "type": "string",
+                    "description": "Relative position of the prop within the shot (e.g., 'on desk', 'in hand', 'background').",
+                    "default": ""
+                  }
+                }
+              },
+              "default": []
+            },
+            "shot_lighting": {
+              "type": "string",
+              "description": "Description of the lighting conditions (e.g., 'natural light from window', 'dim, artificial light', 'bright, overhead').",
+              "default": ""
+            },
+            "shot_time_of_day": {
+              "type": "string",
+              "description": "Time of day depicted in the shot (e.g., 'morning', 'afternoon', 'night', 'dusk').",
+              "default": ""
+            },
+            "shot_weather": {
+              "type": "string",
+              "description": "Weather conditions if applicable (e.g., 'sunny', 'rainy', 'snowy', 'overcast').",
+              "default": ""
+            },
+            "transition_to_next_shot": {
+              "type": "string",
+              "description": "How this shot transitions to the next (e.g., 'cut', 'fade to black', 'dissolve'). The last shot in a video might not need this.",
+              "enum": ["cut", "fade to black", "fade to white", "dissolve", "wipe_left", "wipe_right", "wipe_up", "wipe_down"],
+              "default": "cut"
+            }
+          }
+        }
+      }
+    }
+  }
+}
