@@ -1,0 +1,40 @@
+{
+  "video_id": "video_123",
+  "video_title": "Productivity at Work",
+  "video_description": "A short video showcasing a person working diligently at a desk.",
+  "output_format": "mp4",
+  "resolution": "1920x1080",
+  "frame_rate": 30,
+  "shots": [
+    {
+      "shot_id": "shot_001",
+      "shot_duration": "4s",
+      "shot_location": "indoor office",
+      "shot_description": "A person is sitting at a desk working on a laptop.",
+      "shot_details": "The person is wearing a blue shirt and glasses, focused on the laptop screen. The desk has a few papers and a coffee mug on it.",
+      "shot_sounds": ["keyboard typing", "mouse clicking"],
+      "shot_dialogue": null,
+      "shot_camera_position": "front",
+      "shot_camera_angle": "eye-level",
+      "shot_lighting": "natural light from window",
+      "shot_time_of_day": "afternoon",
+      "shot_weather": "sunny",
+      "transition_to_next_shot": "cut"
+    },
+    {
+      "shot_id": "shot_002",
+      "shot_duration": "2s",
+      "shot_location": "indoor office",
+      "shot_description": "Close-up of laptop screen.",
+      "shot_details": "The screen displays lines of code.",
+      "shot_sounds": ["subtle ambient office noise"],
+      "shot_dialogue": null,
+      "shot_camera_position": "overhead",
+      "shot_camera_angle": "high-angle",
+      "shot_lighting": "monitor glow",
+      "shot_time_of_day": "afternoon",
+      "shot_weather": "sunny",
+      "transition_to_next_shot": "fade to black"
+    }
+  ]
+}
