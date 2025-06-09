@@ -1,0 +1,43 @@
+{
+  "video_id": "video_789",
+  "video_title": "Dynamic Office shot",
+  "video_description": "A complex shot with character interaction and specific object details.",
+  "video_duration": "8s",
+  "video_aspect_ratio": "16:9",
+  "shots": [
+    {
+      "shot_id": "shot_001",
+      "shot_duration": "8s",
+      "shot_location": "modern office",
+      "shot_description": "Two people interacting in an office setting.",
+      "shot_details": "A bright, open-plan office with large windows. Plants are visible in the background.",
+      "shot_sounds": ["light office chatter", "keyboard typing"],
+      "shot_dialogue": [
+        {"character": "Sarah", "line": "Did you get my email?"},
+        {"character": "Tom", "line": "Just saw it, I'm on it."}
+      ],
+      "shot_camera_movements": [
+        {"type": "pan_left", "duration": "2s", "target": "Tom"},
+        {"type": "zoom_in", "duration": "1s", "target": "Sarah's face"}
+      ],
+      "shot_characters": [
+        {
+          "character_id": "char_sarah",
+          "description": "Female, mid-30s, wearing a business casual outfit, blonde hair.",
+          "action": "sitting at desk, looking at laptop, then turns to speak to Tom",
+          "expression": "neutral, then slightly curious"
+        },
+        {
+          "character_id": "char_tom",
+          "description": "Male, late-20s, wearing a t-shirt and jeans, dark hair.",
+          "action": "standing by Sarah's desk, holding a tablet, then nods",
+          "expression": "attentive"
+        }
+      ],
+      "shot_lighting": "bright, natural light",
+      "shot_time_of_day": "late morning",
+      "shot_weather": "overcast",
+      "transition_to_next_shot": "cut"
+    }
+  ]
+}
